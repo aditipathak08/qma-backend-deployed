@@ -1,1 +1,0 @@
-# qma-backend-deployed

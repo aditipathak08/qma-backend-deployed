@@ -1,0 +1,29 @@
+# Use the .NET 10.0 SDK for building
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+WORKDIR /app
+
+# Copy the solution file and restore dependencies
+COPY *.slnx .
+COPY QuantityMeasurementApp.API/*.csproj ./QuantityMeasurementApp.API/
+COPY QuantityMeasurementApp.Models/*.csproj ./QuantityMeasurementApp.Models/
+COPY QuantityMeasurementApp.Service/*.csproj ./QuantityMeasurementApp.Service/
+COPY QuantityMeasurementApp.Repository/*.csproj ./QuantityMeasurementApp.Repository/
+COPY QuantityMeasurementApp.Utilities/*.csproj ./QuantityMeasurementApp.Utilities/
+COPY QuantityMeasurementApp.Exceptions/*.csproj ./QuantityMeasurementApp.Exceptions/
+COPY QuantityMeasurementApp.Controller/*.csproj ./QuantityMeasurementApp.Controller/
+
+RUN dotnet restore QuantityMeasurementApp.API/QuantityMeasurementApp.API.csproj
+
+# Copy the rest of the code and build
+COPY . .
+WORKDIR /app/QuantityMeasurementApp.API
+RUN dotnet publish -c Release -o out
+
+# Build the runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:10.0
+WORKDIR /app
+COPY --from=build /app/QuantityMeasurementApp.API/out .
+
+EXPOSE 80
+
+ENTRYPOINT ["dotnet", "QuantityMeasurementApp.API.dll"]

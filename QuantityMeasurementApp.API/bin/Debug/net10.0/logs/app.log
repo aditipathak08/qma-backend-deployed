@@ -1,0 +1,336 @@
+2026-04-15 14:04:52.3992|ERROR|QuantityMeasurementApp.API.Program|Startup failed. StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). Error connecting right now. To allow this multiplexer to continue retrying until it's able to connect, use abortConnect=false in your connection string or AbortOnConnectFail=false; in your code.
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImpl(ConfigurationOptions configuration, TextWriter writer, Nullable`1 serverType, EndPointCollection endpoints) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 691
+   at StackExchange.Redis.ConnectionMultiplexer.Connect(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 663
+   at StackExchange.Redis.ConnectionMultiplexer.Connect(String configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 641
+   at Program.<Main>$(String[] args) in C:\v\QuantityMeasurementApp\QuantityMeasurementApp.API\Program.cs:line 34
+2026-04-15 14:05:18.2116|ERROR|QuantityMeasurementApp.API.Program|Startup failed. StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). Error connecting right now. To allow this multiplexer to continue retrying until it's able to connect, use abortConnect=false in your connection string or AbortOnConnectFail=false; in your code.
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImpl(ConfigurationOptions configuration, TextWriter writer, Nullable`1 serverType, EndPointCollection endpoints) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 691
+   at StackExchange.Redis.ConnectionMultiplexer.Connect(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 663
+   at StackExchange.Redis.ConnectionMultiplexer.Connect(String configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 641
+   at Program.<Main>$(String[] args) in C:\v\QuantityMeasurementApp\QuantityMeasurementApp.API\Program.cs:line 34
+2026-04-15 14:10:16.1765|ERROR|QuantityMeasurementApp.API.Program|Startup failed. Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 taskCompletionSource, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext _, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureCreated()
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.EnsureCreated()
+   at Program.<Main>$(String[] args) in C:\v\QuantityMeasurementApp\QuantityMeasurementApp.API\Program.cs:line 80
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:258,State:0,Class:20
+2026-04-15 14:12:31.3882|ERROR|QuantityMeasurementApp.API.Program|Startup failed. Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 taskCompletionSource, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext _, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureCreated()
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.EnsureCreated()
+   at Program.<Main>$(String[] args) in C:\v\QuantityMeasurementApp\QuantityMeasurementApp.API\Program.cs:line 80
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:258,State:0,Class:20
+2026-04-15 14:23:37.9408|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:23:54.1431|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (9 attempts left) 
+2026-04-15 14:23:57.1446|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:23:57.1446|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (8 attempts left) 
+2026-04-15 14:24:00.1538|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:24:15.1621|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (7 attempts left) 
+2026-04-15 14:24:18.1666|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:24:18.1666|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (6 attempts left) 
+2026-04-15 14:24:21.1843|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:24:21.1843|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (5 attempts left) 
+2026-04-15 14:24:24.1975|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:24:24.1975|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (4 attempts left) 
+2026-04-15 14:24:27.2148|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:24:42.2131|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (3 attempts left) 
+2026-04-15 14:24:45.2281|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:24:45.2316|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (2 attempts left) 
+2026-04-15 14:24:48.2361|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:24:48.2361|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (1 attempts left) 
+2026-04-15 14:24:51.2403|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:24:51.2403|ERROR|QuantityMeasurementApp.API.Program|Failed to connect to the database after several attempts. Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 taskCompletionSource, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext _, TState s)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass28_0`2.<Execute>b__0(DbContext context, TState innerState)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureCreated()
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.EnsureCreated()
+   at Program.<Main>$(String[] args) in C:\v\QuantityMeasurementApp\QuantityMeasurementApp.API\Program.cs:line 95
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:258,State:0,Class:20
+2026-04-15 14:24:51.2748|ERROR|QuantityMeasurementApp.API.Program|Startup failed. Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 taskCompletionSource, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext _, TState s)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass28_0`2.<Execute>b__0(DbContext context, TState innerState)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureCreated()
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.EnsureCreated()
+   at Program.<Main>$(String[] args) in C:\v\QuantityMeasurementApp\QuantityMeasurementApp.API\Program.cs:line 95
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:258,State:0,Class:20
+2026-04-15 14:28:40.4970|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:28:56.5533|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (9 attempts left) 
+2026-04-15 14:28:59.5547|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:28:59.5547|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (8 attempts left) 
+2026-04-15 14:29:02.5589|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:29:17.5701|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (7 attempts left) 
+2026-04-15 14:29:20.5779|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:29:20.5779|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (6 attempts left) 
+2026-04-15 14:29:23.5843|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:29:23.5843|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (5 attempts left) 
+2026-04-15 14:29:26.5879|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:29:26.5879|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (4 attempts left) 
+2026-04-15 14:29:29.5922|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:29:44.5967|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (3 attempts left) 
+2026-04-15 14:29:47.6095|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:29:47.6095|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (2 attempts left) 
+2026-04-15 14:29:50.6186|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:29:50.6186|WARN|QuantityMeasurementApp.API.Program|Database not ready. Retrying in 3 seconds... (1 attempts left) 
+2026-04-15 14:29:53.6231|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:29:53.6231|ERROR|QuantityMeasurementApp.API.Program|Failed to connect to the database after several attempts. Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 taskCompletionSource, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext _, TState s)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass28_0`2.<Execute>b__0(DbContext context, TState innerState)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureCreated()
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.EnsureCreated()
+   at Program.<Main>$(String[] args) in C:\v\QuantityMeasurementApp\QuantityMeasurementApp.API\Program.cs:line 95
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:258,State:0,Class:20
+2026-04-15 14:29:53.6555|ERROR|QuantityMeasurementApp.API.Program|Startup failed. Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 taskCompletionSource, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext _, TState s)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass28_0`2.<Execute>b__0(DbContext context, TState innerState)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureCreated()
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.EnsureCreated()
+   at Program.<Main>$(String[] args) in C:\v\QuantityMeasurementApp\QuantityMeasurementApp.API\Program.cs:line 95
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:258,State:0,Class:20
+2026-04-15 14:38:02.4494|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:38:04.6330|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (566ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [QuantityMeasurementDB]; 
+2026-04-15 14:38:05.0268|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (384ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [QuantityMeasurementDB] SET READ_COMMITTED_SNAPSHOT ON;
+END; 
+2026-04-15 14:38:05.0907|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2026-04-15 14:38:05.2129|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [QuantityMeasurements] (
+    [Id] int NOT NULL IDENTITY,
+    [Operand1Value] float NOT NULL,
+    [Operand1Unit] nvarchar(max) NOT NULL,
+    [Operand2Value] float NULL,
+    [Operand2Unit] nvarchar(max) NULL,
+    [Operation] nvarchar(max) NOT NULL,
+    [ResultValue] float NULL,
+    [ResultUnit] nvarchar(max) NULL,
+    [ErrorMessage] nvarchar(max) NULL,
+    CONSTRAINT [PK_QuantityMeasurements] PRIMARY KEY ([Id])
+); 
+2026-04-15 14:38:05.2175|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Email] nvarchar(450) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [Salt] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+); 
+2026-04-15 14:38:05.2315|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Users_Email] ON [Users] ([Email]); 
+2026-04-15 14:38:05.2484|INFO|QuantityMeasurementApp.API.Program|Database connection successful. 
+2026-04-15 14:38:05.3584|INFO|QuantityMeasurementApp.API.Program|API started successfully. 
+2026-04-15 14:38:05.3851|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\pmdhrs\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2026-04-15 14:38:05.5223|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5248 
+2026-04-15 14:38:05.5287|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2026-04-15 14:38:05.5287|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2026-04-15 14:38:05.5287|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\v\QuantityMeasurementApp\QuantityMeasurementApp.API 
+2026-04-15 14:38:18.1400|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5248/ - - - 
+2026-04-15 14:38:18.2049|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2026-04-15 14:38:18.2560|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HTTP: GET /' 
+2026-04-15 14:38:18.2560|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HTTP: GET /' 
+2026-04-15 14:38:18.2620|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5248/ - 200 - text/plain;+charset=utf-8 131.4653ms 
+2026-04-15 14:38:18.4496|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5248/favicon.ico - - - 
+2026-04-15 14:38:18.4628|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5248/favicon.ico - 404 0 - 13.0914ms 
+2026-04-15 14:38:18.4776|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5248/favicon.ico, Response status code: 404 
+2026-04-15 14:38:24.8077|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5248/swagger - - - 
+2026-04-15 14:38:24.8131|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5248/swagger - 301 0 - 5.2568ms 
+2026-04-15 14:38:24.8389|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5248/swagger/index.html - - - 
+2026-04-15 14:38:25.0416|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5248/swagger/index.html - 200 - text/html;charset=utf-8 202.5998ms 
+2026-04-15 14:38:25.1276|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5248/swagger/index.css - - - 
+2026-04-15 14:38:25.1276|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5248/swagger/swagger-ui-bundle.js - - - 
+2026-04-15 14:38:25.1276|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5248/swagger/swagger-ui.css - - - 
+2026-04-15 14:38:25.1276|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5248/swagger/swagger-ui-standalone-preset.js - - - 
+2026-04-15 14:38:25.1565|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5248/swagger/swagger-ui.css - 200 26388 text/css 27.9224ms 
+2026-04-15 14:38:25.1565|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5248/swagger/index.css - 200 152 text/css 29.2671ms 
+2026-04-15 14:38:25.1565|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5248/swagger/index.js - - - 
+2026-04-15 14:38:25.1880|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5248/swagger/index.js - 200 - application/javascript;charset=utf-8 25.8421ms 
+2026-04-15 14:38:25.2311|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5248/swagger/swagger-ui-standalone-preset.js - 200 76581 text/javascript 102.2614ms 
+2026-04-15 14:38:25.2311|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5248/swagger/swagger-ui-bundle.js - 200 417806 text/javascript 103.2594ms 
+2026-04-15 14:38:25.4628|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5248/swagger/v1/swagger.json - - - 
+2026-04-15 14:38:25.7961|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5248/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 333.2696ms 
+2026-04-15 14:38:51.7334|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5248/api/auth/register - application/json 75 
+2026-04-15 14:38:51.7474|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QuantityMeasurementApp.API.Controllers.AuthController.Register (QuantityMeasurementApp.API)' 
+2026-04-15 14:38:51.7785|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(QuantityMeasurementApp.API.DTO.RegisterRequest) on controller QuantityMeasurementApp.API.Controllers.AuthController (QuantityMeasurementApp.API). 
+2026-04-15 14:38:52.2779|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (65ms) [Parameters=[@email='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Salt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @email 
+2026-04-15 14:38:52.4486|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [Name], [PasswordHash], [Salt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3); 
+2026-04-15 14:38:52.4852|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2026-04-15 14:38:52.5097|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QuantityMeasurementApp.API.Controllers.AuthController.Register (QuantityMeasurementApp.API) in 713.4864ms 
+2026-04-15 14:38:52.5097|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QuantityMeasurementApp.API.Controllers.AuthController.Register (QuantityMeasurementApp.API)' 
+2026-04-15 14:38:52.5204|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5248/api/auth/register - 200 - application/json;+charset=utf-8 787.0545ms 
+2026-04-15 14:39:15.8937|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5248/api/auth/login - application/json 56 
+2026-04-15 14:39:15.8937|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'QuantityMeasurementApp.API.Controllers.AuthController.Login (QuantityMeasurementApp.API)' 
+2026-04-15 14:39:15.9050|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuantityMeasurementApp.API.DTO.LoginRequest) on controller QuantityMeasurementApp.API.Controllers.AuthController (QuantityMeasurementApp.API). 
+2026-04-15 14:39:16.0261|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@email='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Salt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @email 
+2026-04-15 14:39:16.0676|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2026-04-15 14:39:16.0676|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action QuantityMeasurementApp.API.Controllers.AuthController.Login (QuantityMeasurementApp.API) in 164.0816ms 
+2026-04-15 14:39:16.0676|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'QuantityMeasurementApp.API.Controllers.AuthController.Login (QuantityMeasurementApp.API)' 
+2026-04-15 14:39:16.0676|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5248/api/auth/login - 200 - application/json;+charset=utf-8 176.3412ms 
+2026-04-15 14:40:57.6054|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2026-04-15 14:41:16.4840|INFO|QuantityMeasurementApp.API.Program|Attempting to connect to the database... 
+2026-04-15 14:41:17.9523|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2026-04-15 14:41:18.2465|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (269ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND [o].[object_id] NOT IN (SELECT [ep].[major_id]
+        FROM [sys].[extended_properties] AS [ep]
+        WHERE [ep].[minor_id] = 0
+            AND [ep].[class] = 1
+            AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0 
+2026-04-15 14:41:18.2465|INFO|QuantityMeasurementApp.API.Program|Database connection successful. 
+2026-04-15 14:41:18.3561|INFO|QuantityMeasurementApp.API.Program|API started successfully. 
+2026-04-15 14:41:18.3820|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\pmdhrs\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2026-04-15 14:41:18.4893|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5248 
+2026-04-15 14:41:18.4893|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2026-04-15 14:41:18.4893|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2026-04-15 14:41:18.4893|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\v\QuantityMeasurementApp\QuantityMeasurementApp.API 
+2026-04-15 14:43:17.8510|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 

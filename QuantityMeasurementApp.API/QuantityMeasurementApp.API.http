@@ -1,0 +1,141 @@
+# ### Compare
+# POST http://localhost:5248/api/quantity/compare
+# Content-Type: application/json
+
+# [
+#  { "value": 10, "unit": "Feet" },
+#  { "value": 120, "unit": "Inch" }
+# ]
+
+
+# ### Convert
+# POST http://localhost:5248/api/quantity/convert/Meter
+# Content-Type: application/json
+
+# {
+#  "value": 10,
+#  "unit": "Feet"
+# }
+
+
+# ### Addition
+# POST http://localhost:5248/api/quantity/add
+# Content-Type: application/json
+
+# [
+#  { "value": 5, "unit": "Feet" },
+#  { "value": 5, "unit": "Feet" }
+# ]
+
+
+# ### Subtraction
+# POST http://localhost:5248/api/quantity/subtract
+# Content-Type: application/json
+
+# [
+#  { "value": 10, "unit": "Feet" },
+#  { "value": 5, "unit": "Feet" }
+# ]
+
+
+# ### Division
+# POST http://localhost:5248/api/quantity/divide
+# Content-Type: application/json
+
+# [
+#  { "value": 10, "unit": "Feet" },
+#  { "value": 5, "unit": "Feet" }
+# ]
+
+
+### ================================
+
+### 🔐 AUTH APIs
+
+### ================================
+
+### Register User
+
+POST http://localhost:5248/api/auth/register
+Content-Type: application/json
+
+{
+"name": "Vijay Kumar",
+"email": "pmdhrs@gmail.com",
+"password": "Vijay@841238"
+}
+
+### Login User
+
+POST http://localhost:5248/api/auth/login
+Content-Type: application/json
+
+{
+"email": "pmdhrs@gmail.com",
+"password": "Vijay@841238"
+}
+
+### 🔑 Copy token from login response and paste below
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJwbWRocnNAZ21haWwuY29tIiwiZXhwIjoxNzc0Njk5MTA3fQ.xndVstr9OtXpByqzuIq_5feAABKOiZI3T2z26ZYJdqA
+
+### ================================
+
+### ⚖️ QUANTITY APIs (PROTECTED)
+
+### ================================
+
+### Compare
+
+POST http://localhost:5248/api/quantity/compare
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+[
+{ "value": 10, "unit": "Feet" },
+{ "value": 120, "unit": "Inch" }
+]
+
+### Convert
+
+POST http://localhost:5248/api/quantity/convert/Meter
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+"value": 10,
+"unit": "Feet"
+}
+
+### Addition
+
+POST http://localhost:5248/api/quantity/add
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+[
+{ "value": 5, "unit": "Feet" },
+{ "value": 5, "unit": "Feet" }
+]
+
+### Subtraction
+
+POST http://localhost:5248/api/quantity/subtract
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+[
+{ "value": 10, "unit": "Feet" },
+{ "value": 5, "unit": "Feet" }
+]
+
+### Division
+
+POST http://localhost:5248/api/quantity/divide
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+[
+{ "value": 10, "unit": "Feet" },
+{ "value": 5, "unit": "Feet" }
+]
