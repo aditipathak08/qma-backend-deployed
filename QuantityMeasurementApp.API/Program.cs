@@ -10,6 +10,7 @@ using System.Text;
 using NLog;
 using NLog.Web;
 using StackExchange.Redis;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
