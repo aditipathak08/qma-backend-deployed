@@ -64,29 +64,30 @@ namespace QuantityMeasurementApp.API.Middleware
                 case QuantityMeasurementException qme:
                     // Why: Business logic errors (e.g., mixing categories) are typically Client Errors.
                     context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-                    response.Message = qme.Message;
-                    response.Type = "QuantityValidationException";
+                    response.message = qme.Message;
+                    response.type = "QuantityValidationException";
                     break;
 
                 case DatabaseException dbe:
                     // Why: Database failures (e.g., connection lost) are Server Errors.
                     context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                    response.Message = "A system error occurred while persisting measurement data. Please contact support.";
-                    response.Type = "DatabasePersistenceException";
+                    response.message = "A system error occurred while persisting measurement data. Please contact support.";
+                    response.type = "DatabasePersistenceException";
                     break;
 
                 default:
                     // Why: Catch-all for any other unexpected system crashes.
                     context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                    response.Message = $"Internal Error: {exception.Message}";
-                    response.Type = "GlobalSystemException";
+                    response.message = $"Internal Error: {exception.Message}";
+                    response.type = "GlobalSystemException";
                     break;
             }
 
             // Sets the response status code for the ErrorDetails DTO.
-            response.StatusCode = context.Response.StatusCode;
+            response.statusCode = context.Response.StatusCode;
 
-            return context.Response.WriteAsync(JsonSerializer.Serialize(response));
+            var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+            return context.Response.WriteAsync(JsonSerializer.Serialize(response, options));
         }
     }
 
@@ -95,10 +96,10 @@ namespace QuantityMeasurementApp.API.Middleware
     /// </summary>
     public class ErrorDetails
     {
-        public int StatusCode { get; set; }
-        public string Message { get; set; } = string.Empty;
-        public string Type { get; set; } = string.Empty;
+        public int statusCode { get; set; }
+        public string message { get; set; } = string.Empty;
+        public string type { get; set; } = string.Empty;
 
-        public override string ToString() => JsonSerializer.Serialize(this);
+        public override string ToString() => JsonSerializer.Serialize(this, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
     }
 }

@@ -42,6 +42,13 @@ try
     
     // Check if DATABASE_URL (Render format) is provided and convert to standard Npgsql format if needed
     var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+    
+    // If DATABASE_URL is not set, use the one provided by the user as a fallback if DefaultConnection is missing or using SQL Server format
+    if (string.IsNullOrEmpty(databaseUrl) && (string.IsNullOrEmpty(connectionString) || connectionString.Contains("Server=")))
+    {
+        databaseUrl = "postgresql://quantity_measurement_db_6fs1_user:BFz0SMmO4MyM17cclwwTuXc1VN37qiKc@dpg-d7fl2c7lk1mc73dghiq0-a/quantity_measurement_db_6fs1";
+    }
+
     if (!string.IsNullOrEmpty(databaseUrl) && (databaseUrl.StartsWith("postgres://") || databaseUrl.StartsWith("postgresql://")))
     {
         // Handle both postgres:// and postgresql:// schemes
