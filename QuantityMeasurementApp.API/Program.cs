@@ -10,7 +10,6 @@ using System.Text;
 using NLog;
 using NLog.Web;
 using StackExchange.Redis;
-using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -76,15 +75,7 @@ try
     builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisOptions));
     builder.Services.AddScoped<RedisCacheService>();
 
-    builder.Services.AddControllers()
-        .AddJsonOptions(options =>
-        {
-            options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
-            options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
-            options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
-            options.JsonSerializerOptions.AllowTrailingCommas = true;
-            options.JsonSerializerOptions.NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString;
-        });
+    builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
     
     // --- 🔐 Configure Swagger for JWT ---

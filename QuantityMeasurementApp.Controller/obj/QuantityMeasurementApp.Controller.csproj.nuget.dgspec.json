@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Controller\\QuantityMeasurementApp.Controller.csproj": {}
+    "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Controller\\QuantityMeasurementApp.Controller.csproj": {}
   },
   "projects": {
-    "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Controller\\QuantityMeasurementApp.Controller.csproj": {
+    "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Controller\\QuantityMeasurementApp.Controller.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Controller\\QuantityMeasurementApp.Controller.csproj",
+        "projectUniqueName": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Controller\\QuantityMeasurementApp.Controller.csproj",
         "projectName": "QuantityMeasurementApp.Controller",
-        "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Controller\\QuantityMeasurementApp.Controller.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Controller\\obj\\",
+        "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Controller\\QuantityMeasurementApp.Controller.csproj",
+        "packagesPath": "C:\\Users\\pmdhrs\\.nuget\\packages\\",
+        "outputPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Controller\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
+          "C:\\Users\\pmdhrs\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -30,11 +26,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj": {
-                "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj"
+              "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj": {
+                "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj"
               },
-              "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Service\\QuantityMeasurementApp.Service.csproj": {
-                "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Service\\QuantityMeasurementApp.Service.csproj"
+              "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Service\\QuantityMeasurementApp.Service.csproj": {
+                "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Service\\QuantityMeasurementApp.Service.csproj"
               }
             }
           }
@@ -49,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -70,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -348,21 +344,17 @@
         }
       }
     },
-    "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\QuantityMeasurementApp.Exceptions.csproj": {
+    "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\QuantityMeasurementApp.Exceptions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\QuantityMeasurementApp.Exceptions.csproj",
+        "projectUniqueName": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\QuantityMeasurementApp.Exceptions.csproj",
         "projectName": "QuantityMeasurementApp.Exceptions",
-        "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\QuantityMeasurementApp.Exceptions.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\obj\\",
+        "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\QuantityMeasurementApp.Exceptions.csproj",
+        "packagesPath": "C:\\Users\\pmdhrs\\.nuget\\packages\\",
+        "outputPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
+          "C:\\Users\\pmdhrs\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -386,7 +378,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -407,7 +399,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -685,21 +677,17 @@
         }
       }
     },
-    "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj": {
+    "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj",
+        "projectUniqueName": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj",
         "projectName": "QuantityMeasurementApp.Models",
-        "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\obj\\",
+        "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj",
+        "packagesPath": "C:\\Users\\pmdhrs\\.nuget\\packages\\",
+        "outputPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
+          "C:\\Users\\pmdhrs\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -723,7 +711,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -744,7 +732,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1022,21 +1010,17 @@
         }
       }
     },
-    "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Repository\\QuantityMeasurementApp.Repository.csproj": {
+    "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Repository\\QuantityMeasurementApp.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Repository\\QuantityMeasurementApp.Repository.csproj",
+        "projectUniqueName": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Repository\\QuantityMeasurementApp.Repository.csproj",
         "projectName": "QuantityMeasurementApp.Repository",
-        "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Repository\\QuantityMeasurementApp.Repository.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Repository\\obj\\",
+        "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Repository\\QuantityMeasurementApp.Repository.csproj",
+        "packagesPath": "C:\\Users\\pmdhrs\\.nuget\\packages\\",
+        "outputPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Repository\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
+          "C:\\Users\\pmdhrs\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -1048,14 +1032,14 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\QuantityMeasurementApp.Exceptions.csproj": {
-                "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\QuantityMeasurementApp.Exceptions.csproj"
+              "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\QuantityMeasurementApp.Exceptions.csproj": {
+                "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\QuantityMeasurementApp.Exceptions.csproj"
               },
-              "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj": {
-                "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj"
+              "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj": {
+                "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj"
               },
-              "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\QuantityMeasurementApp.Utilities.csproj": {
-                "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\QuantityMeasurementApp.Utilities.csproj"
+              "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\QuantityMeasurementApp.Utilities.csproj": {
+                "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\QuantityMeasurementApp.Utilities.csproj"
               }
             }
           }
@@ -1070,7 +1054,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -1101,7 +1085,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1379,21 +1363,17 @@
         }
       }
     },
-    "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Service\\QuantityMeasurementApp.Service.csproj": {
+    "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Service\\QuantityMeasurementApp.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Service\\QuantityMeasurementApp.Service.csproj",
+        "projectUniqueName": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Service\\QuantityMeasurementApp.Service.csproj",
         "projectName": "QuantityMeasurementApp.Service",
-        "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Service\\QuantityMeasurementApp.Service.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Service\\obj\\",
+        "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Service\\QuantityMeasurementApp.Service.csproj",
+        "packagesPath": "C:\\Users\\pmdhrs\\.nuget\\packages\\",
+        "outputPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Service\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
+          "C:\\Users\\pmdhrs\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -1405,17 +1385,17 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\QuantityMeasurementApp.Exceptions.csproj": {
-                "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\QuantityMeasurementApp.Exceptions.csproj"
+              "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\QuantityMeasurementApp.Exceptions.csproj": {
+                "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Exceptions\\QuantityMeasurementApp.Exceptions.csproj"
               },
-              "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj": {
-                "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj"
+              "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj": {
+                "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj"
               },
-              "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Repository\\QuantityMeasurementApp.Repository.csproj": {
-                "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Repository\\QuantityMeasurementApp.Repository.csproj"
+              "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Repository\\QuantityMeasurementApp.Repository.csproj": {
+                "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Repository\\QuantityMeasurementApp.Repository.csproj"
               },
-              "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\QuantityMeasurementApp.Utilities.csproj": {
-                "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\QuantityMeasurementApp.Utilities.csproj"
+              "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\QuantityMeasurementApp.Utilities.csproj": {
+                "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\QuantityMeasurementApp.Utilities.csproj"
               }
             }
           }
@@ -1430,7 +1410,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -1457,7 +1437,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1735,21 +1715,17 @@
         }
       }
     },
-    "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\QuantityMeasurementApp.Utilities.csproj": {
+    "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\QuantityMeasurementApp.Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\QuantityMeasurementApp.Utilities.csproj",
+        "projectUniqueName": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\QuantityMeasurementApp.Utilities.csproj",
         "projectName": "QuantityMeasurementApp.Utilities",
-        "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\QuantityMeasurementApp.Utilities.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\obj\\",
+        "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\QuantityMeasurementApp.Utilities.csproj",
+        "packagesPath": "C:\\Users\\pmdhrs\\.nuget\\packages\\",
+        "outputPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Utilities\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
+          "C:\\Users\\pmdhrs\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -1773,7 +1749,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -1816,7 +1792,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

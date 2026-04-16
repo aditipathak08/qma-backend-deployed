@@ -19,16 +19,31 @@ namespace QuantityMeasurementApp.API.Controllers
         [HttpPost("register")]
         public IActionResult Register([FromBody] RegisterRequest request)
         {
-            var result = _service.Register(request.Name ?? "", request.Email ?? "", request.Password ?? "");
-            return Ok(new { message = result });
+            if (request == null || request.Name == null || request.Email == null || request.Password == null)
+                return BadRequest(new { message = "Invalid request data" });
+
+            var result = _service.Register(request.Name, request.Email, request.Password);
+
+            return Ok(new
+            {
+                message = result
+            });
         }
 
         // 🔐 LOGIN API
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginRequest request)
         {
-            var token = _service.Login(request.Email ?? "", request.Password ?? "");
-            return Ok(new { message = "Login successful", token = token });
+            if (request == null || request.Email == null || request.Password == null)
+                return BadRequest(new { message = "Invalid request data" });
+
+            var token = _service.Login(request.Email, request.Password);
+
+            return Ok(new
+            {
+                message = "Login successful",
+                token = token
+            });
         }
     }
 }
