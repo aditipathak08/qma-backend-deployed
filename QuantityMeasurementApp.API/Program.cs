@@ -75,7 +75,11 @@ try
     builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisOptions));
     builder.Services.AddScoped<RedisCacheService>();
 
-    builder.Services.AddControllers();
+    builder.Services.AddControllers()
+        .AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+        });
     builder.Services.AddEndpointsApiExplorer();
     
     // --- 🔐 Configure Swagger for JWT ---

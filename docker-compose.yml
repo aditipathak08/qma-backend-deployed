@@ -1,18 +1,6 @@
 version: '3.8'
 
 services:
-  sqlserver:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    container_name: quantity-sqlserver
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=Your_Password123
-      - MSSQL_PID=Express
-    ports:
-      - "1433:1433"
-    volumes:
-      - sqlvolume:/var/opt/mssql
-
   redis:
     image: redis:alpine
     container_name: quantity-redis
@@ -28,11 +16,10 @@ services:
       - "5000:80"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=QuantityMeasurementDB;User Id=sa;Password=Your_Password123;TrustServerCertificate=True;
+      - DATABASE_URL=postgresql://quantity_measurement_db_6fs1_user:BFz0SMmO4MyM17cclwwTuXc1VN37qiKc@dpg-d7fl2c7lk1mc73dghiq0-a/quantity_measurement_db_6fs1
       - Redis__ConnectionString=redis:6379
       - Jwt__Key=THIS_IS_A_SECURE_32_CHARACTER_KEY_!!!
     depends_on:
-      - sqlserver
       - redis
 
 volumes:

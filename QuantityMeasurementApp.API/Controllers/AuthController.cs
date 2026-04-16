@@ -19,10 +19,7 @@ namespace QuantityMeasurementApp.API.Controllers
         [HttpPost("register")]
         public IActionResult Register([FromBody] RegisterRequest request)
         {
-            if (request == null || request.Name == null || request.Email == null || request.Password == null)
-                return BadRequest(new { message = "Invalid request data" });
-
-            var result = _service.Register(request.Name, request.Email, request.Password);
+            var result = _service.Register(request.Name!, request.Email!, request.Password!);
 
             return Ok(new
             {
@@ -34,10 +31,7 @@ namespace QuantityMeasurementApp.API.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginRequest request)
         {
-            if (request == null || request.Email == null || request.Password == null)
-                return BadRequest(new { message = "Invalid request data" });
-
-            var token = _service.Login(request.Email, request.Password);
+            var token = _service.Login(request.Email!, request.Password!);
 
             return Ok(new
             {
