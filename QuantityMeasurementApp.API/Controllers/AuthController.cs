@@ -5,7 +5,7 @@ using QuantityMeasurementApp.Service;
 namespace QuantityMeasurementApp.API.Controllers
 {
     [ApiController]
-    [Route("api/auth")]
+    [Route("auth")]
     public class AuthController : ControllerBase
     {
         private readonly IAuthService _service;

@@ -7,7 +7,7 @@ using QuantityMeasurementApp.API.DTO;
 namespace QuantityMeasurementApp.API.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [Authorize]
     public class QuantityController : ControllerBase
     {

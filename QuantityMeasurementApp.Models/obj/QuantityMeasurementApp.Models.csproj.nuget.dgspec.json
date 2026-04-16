@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj": {}
+    "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj": {}
   },
   "projects": {
-    "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj": {
+    "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj",
+        "projectUniqueName": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj",
         "projectName": "QuantityMeasurementApp.Models",
-        "projectPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj",
-        "packagesPath": "C:\\Users\\pmdhrs\\.nuget\\packages\\",
-        "outputPath": "C:\\v\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\obj\\",
+        "projectPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\QuantityMeasurementApp.Models.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\qma-deployed\\qma-backend-deployed\\QuantityMeasurementApp.Models\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\pmdhrs\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -38,7 +42,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -59,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

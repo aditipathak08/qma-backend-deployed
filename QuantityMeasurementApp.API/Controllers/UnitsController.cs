@@ -7,7 +7,7 @@ using System.Linq;
 namespace QuantityMeasurementApp.API.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class UnitsController : ControllerBase
     {
         [HttpGet]
